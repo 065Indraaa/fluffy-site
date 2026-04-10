@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const PUMPFUN_URL = 'https://pump.fun/coin/BkUWKWTvgmxn6S45p2RGKTTvvfJeVwShqG4nYCvjpump';
-const X_URL = 'https://x.com';
+const TIKTOK_URL = 'https://www.tiktok.com/@fluffyfishlover';
 const CA_ADDRESS = 'BkUWKWTvgmxn6S45p2RGKTTvvfJeVwShqG4nYCvjpump';
 
 function StarField() {
@@ -34,15 +34,15 @@ function FloatingNotes() {
   );
 }
 
-function XIcon({ size = 18 }) {
+function TikTokIcon({ size = 18 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
     </svg>
   );
 }
 
-function Navbar({ onBuyClick, onXClick }) {
+function Navbar({ onBuyClick, onTikTokClick }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -61,7 +61,7 @@ function Navbar({ onBuyClick, onXClick }) {
         <a href="#community" className="nav-link">Community</a>
       </div>
       <div className="nav-btns">
-        <button className="btn-x-sm" onClick={onXClick}><XIcon size={13} /> Follow</button>
+        <button className="btn-x-sm" onClick={onTikTokClick}><TikTokIcon size={13} /> Follow</button>
         <button className="btn-pump-sm" onClick={onBuyClick}>🚀 Buy Now</button>
       </div>
     </nav>
@@ -98,7 +98,7 @@ function CABox() {
   );
 }
 
-function HeroSection({ onBuyClick, onXClick }) {
+function HeroSection({ onBuyClick, onTikTokClick }) {
   return (
     <section className="hero" id="hero">
       <FloatingNotes />
@@ -116,7 +116,7 @@ function HeroSection({ onBuyClick, onXClick }) {
       <CABox />
       <div className="hero-btns">
         <button className="btn-primary" onClick={onBuyClick}>🚀 Buy $FLUFFY on Pump.fun</button>
-        <button className="btn-secondary" onClick={onXClick}><XIcon /> Join X Community</button>
+        <button className="btn-secondary" onClick={onTikTokClick}><TikTokIcon /> Join TikTok</button>
       </div>
       <div className="scroll-hint"><span className="scroll-arrow">↓</span></div>
     </section>
@@ -229,7 +229,7 @@ function HowToBuySection({ onBuyClick }) {
   );
 }
 
-function CommunitySection({ onBuyClick, onXClick }) {
+function CommunitySection({ onBuyClick, onTikTokClick }) {
   return (
     <section className="section community-section" id="community">
       <div className="community-bg-glow" />
@@ -240,12 +240,12 @@ function CommunitySection({ onBuyClick, onXClick }) {
           231K followers already love Fluffy. Early supporters recognize the perfect storm: proven viral appeal, established audience, AI novelty, and the explosive potential of fair-launched meme coins. Don't miss the dance. 💃
         </p>
         <div className="community-cards">
-          <div className="comm-card comm-card-x" onClick={onXClick} role="button" tabIndex={0}>
-            <div className="comm-card-icon"><XIcon size={38} /></div>
+          <div className="comm-card comm-card-x" onClick={onTikTokClick} role="button" tabIndex={0}>
+            <div className="comm-card-icon"><TikTokIcon size={38} /></div>
             <div className="comm-card-body">
-              <div className="comm-card-title">X (Twitter) Community</div>
-              <div className="comm-card-sub">Follow for updates, memes &amp; alpha</div>
-              <div className="comm-card-stat">🐱 231K+ Fluffy fans</div>
+              <div className="comm-card-title">TikTok</div>
+              <div className="comm-card-sub">Follow for viral dance videos &amp; more</div>
+              <div className="comm-card-stat">🐱 231K+ Followers</div>
             </div>
             <div className="comm-card-arrow">→</div>
           </div>
@@ -269,7 +269,7 @@ function CommunitySection({ onBuyClick, onXClick }) {
   );
 }
 
-function Footer({ onBuyClick, onXClick }) {
+function Footer({ onBuyClick, onTikTokClick }) {
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -278,7 +278,7 @@ function Footer({ onBuyClick, onXClick }) {
           <span>$FLUFFY</span>
         </div>
         <div className="footer-links">
-          <button className="footer-link" onClick={onXClick}><XIcon size={14} /> Twitter / X</button>
+          <button className="footer-link" onClick={onTikTokClick}><TikTokIcon size={14} /> TikTok</button>
           <button className="footer-link" onClick={onBuyClick}>🚀 Pump.fun</button>
         </div>
         <p className="footer-copy">© 2026 $FLUFFY — The AI Dancing Cat on Solana</p>
@@ -290,19 +290,19 @@ function Footer({ onBuyClick, onXClick }) {
 
 export default function App() {
   const openPump = () => window.open(PUMPFUN_URL, '_blank', 'noopener');
-  const openX = () => window.open(X_URL, '_blank', 'noopener');
+  const openTikTok = () => window.open(TIKTOK_URL, '_blank', 'noopener');
   return (
     <div className="app">
       <StarField />
-      <Navbar onBuyClick={openPump} onXClick={openX} />
+      <Navbar onBuyClick={openPump} onTikTokClick={openTikTok} />
       <TickerBar />
-      <HeroSection onBuyClick={openPump} onXClick={openX} />
+      <HeroSection onBuyClick={openPump} onTikTokClick={openTikTok} />
       <StatsBar />
       <AboutSection />
       <TokenomicsSection />
       <HowToBuySection onBuyClick={openPump} />
-      <CommunitySection onBuyClick={openPump} onXClick={openX} />
-      <Footer onBuyClick={openPump} onXClick={openX} />
+      <CommunitySection onBuyClick={openPump} onTikTokClick={openTikTok} />
+      <Footer onBuyClick={openPump} onTikTokClick={openTikTok} />
     </div>
   );
 }
