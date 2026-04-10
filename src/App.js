@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const PUMPFUN_URL = 'https://pump.fun/';
+const PUMPFUN_URL = 'https://pump.fun/coin/BkUWKWTvgmxn6S45p2RGKTTvvfJeVwShqG4nYCvjpump;
 const X_URL = 'https://x.com';
-const CA_ADDRESS = 'Paste Your CA here';
+const CA_ADDRESS = 'BkUWKWTvgmxn6S45p2RGKTTvvfJeVwShqG4nYCvjpump';
 
 function StarField() {
   const stars = Array.from({ length: 120 }, (_, i) => ({
