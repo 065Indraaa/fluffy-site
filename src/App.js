@@ -52,7 +52,7 @@ function Navbar({ onBuyClick, onXClick }) {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-logo">
-        <img src="/fluffy.png" alt="Fluffy" className="nav-cat-img" />
+        <img src="/IMG_20260410_220124_216.png" alt="Fluffy" className="nav-cat-img" />
         <span>$FLUFFY</span>
       </div>
       <div className="nav-links">
