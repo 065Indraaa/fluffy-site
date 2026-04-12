@@ -469,6 +469,30 @@ body {
   background: rgba(255,255,255,0.08);
 }
 
+.btn-x-hero {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(8px);
+}
+
+.btn-x-hero:hover {
+  transform: scale(1.06) rotate(-1deg);
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
 .scroll-hint {
   margin-top: auto;
   padding-top: 20px;
@@ -790,6 +814,17 @@ body {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 16px 40px rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.4);
+}
+
+.comm-card-tiktok {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+
+.comm-card-tiktok:hover {
+  transform: translateY(-6px) rotate(1deg);
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .comm-card-pump {
